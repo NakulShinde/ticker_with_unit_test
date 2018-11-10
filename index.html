@@ -1,0 +1,44 @@
+
+<html>
+    <!--
+    get_ticker.js is a reusable module that gets called on page load.
+    It is passed with an element ID. The ID is used as the parent node where
+    the module will insert an input field, a text display field, and possibly
+    other elements.
+    Expected behavior:
+    1) On page load there will be an input field
+    2) Enter stock ticker into input field
+    3) Module will fetch data from public financial API for the specified ticker.
+    4) Module will parse data
+    5) Page will show the latest closing price of the specified ticker.
+    
+    
+    API
+    https://www.quandl.com/tools/api
+    https://www.quandl.com/api/v3/datasets/WIKI/AAPL.csv
+    -->
+    <style>
+    
+    div {
+        margin: 5px;
+    }
+    div label{
+        min-width: 150px;
+        font-weight: 600;
+        margin-right: 10px;
+    }
+
+    </style>
+    <script src="get_ticker.js"></script>
+    <body onload="get_ticker.init('tag1')">
+    
+    
+    <div id="tag1"></div>
+    
+    <script>
+        console.log("get_ticker method",get_ticker.add(1,2));
+    </script>
+    
+    </body>
+    </html>
+    
